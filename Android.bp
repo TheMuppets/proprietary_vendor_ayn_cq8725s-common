@@ -13630,14 +13630,6 @@ sh_binary {
 }
 
 sh_binary {
-    name: "init.qcom.class_core",
-    owner: "ayn",
-    src: "proprietary/vendor/bin/init.qcom.class_core.sh",
-    filename: "init.qcom.class_core.sh",
-    soc_specific: true,
-}
-
-sh_binary {
     name: "init.qcom.post_boot",
     owner: "ayn",
     src: "proprietary/vendor/bin/init.qcom.post_boot.sh",

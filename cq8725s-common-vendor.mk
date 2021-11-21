@@ -802,7 +802,6 @@ PRODUCT_PACKAGES += \
     init.kernel.post_boot-sun \
     init.kernel.post_boot-sun_default_6_2 \
     init.kernel.post_boot \
-    init.qcom.class_core \
     init.qcom.post_boot \
     init.qcom.sensors \
     init.qti.kernel \
