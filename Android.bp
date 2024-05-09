@@ -971,38 +971,6 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "vendor.qti.memory.pasrmanager-impl",
-    owner: "ayn",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/hw/vendor.qti.memory.pasrmanager-impl.so",
-            ],
-            shared_libs: [
-                "libbinder_ndk",
-                "libcutils",
-                "libutils",
-                "liblog",
-                "libbase",
-                "libpasrutils",
-                "vendor.qti.memory.pasrmanager-V1-ndk",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    relative_install_path: "hw",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
     name: "vulkan.adreno",
     owner: "ayn",
     strip: {
@@ -4842,31 +4810,6 @@ cc_prebuilt_library_shared {
         android_arm64: {
             srcs: [
                 "proprietary/vendor/lib64/libos.so",
-            ],
-            shared_libs: [
-                "liblog",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "libpasrutils",
-    owner: "ayn",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/libpasrutils.so",
             ],
             shared_libs: [
                 "liblog",
@@ -13510,15 +13453,6 @@ prebuilt_etc_xml {
 }
 
 prebuilt_etc_xml {
-    name: "vendor.qti.memory.pasrmanager-service.xml",
-    owner: "ayn",
-    src: "proprietary/vendor/etc/vintf/manifest/vendor.qti.memory.pasrmanager-service.xml",
-    filename_from_src: true,
-    sub_dir: "vintf/manifest",
-    soc_specific: true,
-}
-
-prebuilt_etc_xml {
     name: "vendor.qti.qccvndhal_aidl-service.xml",
     owner: "ayn",
     src: "proprietary/vendor/etc/vintf/manifest/vendor.qti.qccvndhal_aidl-service.xml",
@@ -14488,49 +14422,6 @@ cc_prebuilt_binary {
     },
     prefer: true,
     relative_install_path: "hw",
-    soc_specific: true,
-}
-
-cc_prebuilt_binary {
-    name: "vendor.qti.memory.pasrmanager-service",
-    owner: "ayn",
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/bin/hw/vendor.qti.memory.pasrmanager-service",
-            ],
-            shared_libs: [
-                "libcutils",
-                "libutils",
-                "liblog",
-                "libhardware_legacy",
-                "libbase",
-                "libhardware",
-                "libpasrutils",
-                "vendor.qti.memory.pasrmanager-V1-ndk",
-                "vendor.qti.memory.pasrmanager-impl",
-                "libbinder_ndk",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    strip: {
-        none: true,
-    },
-    prefer: true,
-    relative_install_path: "hw",
-    soc_specific: true,
-}
-
-sh_binary {
-    name: "init.kernel.init_boot-memory",
-    owner: "ayn",
-    src: "proprietary/vendor/bin/init.kernel.init_boot-memory.sh",
-    filename: "init.kernel.init_boot-memory.sh",
     soc_specific: true,
 }
 
