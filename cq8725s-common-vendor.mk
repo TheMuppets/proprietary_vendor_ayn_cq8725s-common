@@ -112,7 +112,6 @@ PRODUCT_COPY_FILES += \
     vendor/ayn/cq8725s-common/proprietary/vendor/etc/init/poweropt-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/poweropt-service.rc \
     vendor/ayn/cq8725s-common/proprietary/vendor/etc/init/qconfig.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/qconfig.rc \
     vendor/ayn/cq8725s-common/proprietary/vendor/etc/init/qdcmss.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/qdcmss.rc \
-    vendor/ayn/cq8725s-common/proprietary/vendor/etc/init/qesdk-manager.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/qesdk-manager.rc \
     vendor/ayn/cq8725s-common/proprietary/vendor/etc/init/qguard.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/qguard.rc \
     vendor/ayn/cq8725s-common/proprietary/vendor/etc/init/qmipriod.debug.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/qmipriod.debug.rc \
     vendor/ayn/cq8725s-common/proprietary/vendor/etc/init/qmipriod.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/qmipriod.rc \
@@ -185,7 +184,6 @@ PRODUCT_COPY_FILES += \
     vendor/ayn/cq8725s-common/proprietary/vendor/etc/qguard.json:$(TARGET_COPY_OUT_VENDOR)/etc/qguard.json \
     vendor/ayn/cq8725s-common/proprietary/vendor/etc/seccomp_policy/codec2.vendor.base-arm64.policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/codec2.vendor.base-arm64.policy \
     vendor/ayn/cq8725s-common/proprietary/vendor/etc/seccomp_policy/codec2.vendor.ext-arm64.policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/codec2.vendor.ext-arm64.policy \
-    vendor/ayn/cq8725s-common/proprietary/vendor/etc/seccomp_policy/qesdk.policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/qesdk.policy \
     vendor/ayn/cq8725s-common/proprietary/vendor/etc/seccomp_policy/qsap_dcfd.policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/qsap_dcfd.policy \
     vendor/ayn/cq8725s-common/proprietary/vendor/etc/seccomp_policy/qsap_qapeservice.policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/qsap_qapeservice.policy \
     vendor/ayn/cq8725s-common/proprietary/vendor/etc/seccomp_policy/qsap_sensors.policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/qsap_sensors.policy \
@@ -538,8 +536,6 @@ PRODUCT_PACKAGES += \
     libqdcm-mode-parser \
     libqdi \
     libqesdk2_0 \
-    libqesdk_manager \
-    libqesdoem_query_sys \
     libqisl \
     libqmi \
     libqmi_cci \
@@ -731,7 +727,6 @@ PRODUCT_PACKAGES += \
     vendor.qti.qccsyshal_aidl-V1-ndk_vendor \
     vendor.qti.qccvndhal_aidl-V1-ndk_vendor \
     vendor.qti.qccvndhal_aidl-halimpl \
-    vendor.qti.qesdhal-impl \
     vendor.qti.qesdhal@1.0 \
     vendor.qti.qesdhal@1.1 \
     vendor.qti.qesdhal@1.2 \
@@ -808,7 +803,6 @@ PRODUCT_PACKAGES += \
     manifest_btaudiocoreservices_qti.xml \
     manifest_identity_credential.xml \
     qasr_vintf.xml \
-    qesdk-manager.xml \
     snapdragon_services.xml \
     vendor.qti.diag.hal.service.xml \
     vendor.qti.hardware.alarm.xml \
@@ -876,7 +870,6 @@ PRODUCT_PACKAGES += \
     ppd \
     qcc-vendor \
     qdcmss \
-    qesdk-manager \
     qguard \
     qlm-service \
     qmipriod \

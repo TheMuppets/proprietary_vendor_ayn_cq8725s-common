@@ -6269,72 +6269,6 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libqesdk_manager",
-    owner: "ayn",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/libqesdk_manager.so",
-            ],
-            shared_libs: [
-                "libutils",
-                "libcutils",
-                "liblog",
-                "libcrypto",
-                "libjsoncpp",
-                "libminkdescriptor",
-                "libminksocket_vendor",
-                "libqcbor",
-                "libbinder",
-                "libbinder_ndk",
-                "vendor.qti.qesdsys-V4-ndk",
-                "libprotobuf-cpp-lite-21.12-vendorcompat",
-                "libqesdoem_query_sys",
-                "libsqlite",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "libqesdoem_query_sys",
-    owner: "ayn",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/libqesdoem_query_sys.so",
-            ],
-            shared_libs: [
-                "libutils",
-                "libcutils",
-                "liblog",
-                "libjsoncpp",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
     name: "libqisl",
     owner: "ayn",
     strip: {
@@ -11547,38 +11481,6 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "vendor.qti.qesdhal-impl",
-    owner: "ayn",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/vendor.qti.qesdhal-impl.so",
-            ],
-            shared_libs: [
-                "libbase",
-                "libutils",
-                "vendor.qti.qesdhalaidl-V2-ndk",
-                "liblog",
-                "libcutils",
-                "libcrypto",
-                "libjsoncpp",
-                "libbinder_ndk",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
     name: "vendor.qti.qesdhal@1.0",
     owner: "ayn",
     strip: {
@@ -13309,15 +13211,6 @@ prebuilt_etc_xml {
 }
 
 prebuilt_etc_xml {
-    name: "qesdk-manager.xml",
-    owner: "ayn",
-    src: "proprietary/vendor/etc/vintf/manifest/qesdk-manager.xml",
-    filename_from_src: true,
-    sub_dir: "vintf/manifest",
-    soc_specific: true,
-}
-
-prebuilt_etc_xml {
     name: "snapdragon_services.xml",
     owner: "ayn",
     src: "proprietary/vendor/etc/vintf/manifest/snapdragon_services.xml",
@@ -14815,36 +14708,6 @@ cc_prebuilt_binary {
                 "libsdmutils",
                 "libbinder",
                 "liblog",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    strip: {
-        none: true,
-    },
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_binary {
-    name: "qesdk-manager",
-    owner: "ayn",
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/bin/qesdk-manager",
-            ],
-            shared_libs: [
-                "libqesdk_manager",
-                "vendor.qti.qesdhal-impl",
-                "libhidlbase",
-                "liblog",
-                "libutils",
-                "libavservices_minijail",
                 "libc++",
                 "libc",
                 "libm",
