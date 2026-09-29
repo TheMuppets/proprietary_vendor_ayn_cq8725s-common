@@ -113,6 +113,7 @@ PRODUCT_COPY_FILES += \
     vendor/ayn/cq8725s-common/proprietary/vendor/etc/init/qguard.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/qguard.rc \
     vendor/ayn/cq8725s-common/proprietary/vendor/etc/init/qmipriod.debug.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/qmipriod.debug.rc \
     vendor/ayn/cq8725s-common/proprietary/vendor/etc/init/qmipriod.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/qmipriod.rc \
+    vendor/ayn/cq8725s-common/proprietary/vendor/etc/init/qms.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/qms.rc \
     vendor/ayn/cq8725s-common/proprietary/vendor/etc/init/qseecomd.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/qseecomd.rc \
     vendor/ayn/cq8725s-common/proprietary/vendor/etc/init/qwesd.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/qwesd.rc \
     vendor/ayn/cq8725s-common/proprietary/vendor/etc/init/snapdragon_services.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/snapdragon_services.rc \
@@ -155,6 +156,7 @@ PRODUCT_COPY_FILES += \
     vendor/ayn/cq8725s-common/proprietary/vendor/etc/qguard.json:$(TARGET_COPY_OUT_VENDOR)/etc/qguard.json \
     vendor/ayn/cq8725s-common/proprietary/vendor/etc/seccomp_policy/codec2.vendor.base-arm64.policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/codec2.vendor.base-arm64.policy \
     vendor/ayn/cq8725s-common/proprietary/vendor/etc/seccomp_policy/codec2.vendor.ext-arm64.policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/codec2.vendor.ext-arm64.policy \
+    vendor/ayn/cq8725s-common/proprietary/vendor/etc/seccomp_policy/qms.policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/qms.policy \
     vendor/ayn/cq8725s-common/proprietary/vendor/etc/seccomp_policy/qsap_dcfd.policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/qsap_dcfd.policy \
     vendor/ayn/cq8725s-common/proprietary/vendor/etc/seccomp_policy/qsap_sensors.policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/qsap_sensors.policy \
     vendor/ayn/cq8725s-common/proprietary/vendor/etc/seccomp_policy/qspm.policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/qspm.policy \
@@ -500,6 +502,11 @@ PRODUCT_PACKAGES += \
     libqmi_legacy \
     libqmiextservices \
     libqmiservices \
+    libqms \
+    libqms_client \
+    libqms_optimized_route_mgr_sdk \
+    libqms_packetstats_sdk \
+    libqms_sdf_sdk \
     libqrtr \
     libqrtrclient \
     libqseed3 \
@@ -534,6 +541,7 @@ PRODUCT_PACKAGES += \
     libseclog \
     libsensorcal \
     libsensorslog \
+    libshsc \
     libsi \
     libsmemlog \
     libsnapdragoncolor-manager \
@@ -745,6 +753,7 @@ PRODUCT_PACKAGES += \
     manifest_btaudiocoreservices_qti.xml \
     manifest_identity_credential.xml \
     qasr_vintf.xml \
+    qms-saidl.xml \
     snapdragon_services.xml \
     vendor.qti.diag.hal.service.xml \
     vendor.qti.hardware.alarm.xml \
@@ -812,6 +821,7 @@ PRODUCT_PACKAGES += \
     qdcmss \
     qguard \
     qmipriod \
+    qms \
     qrtr-cfg \
     qrtr-lookup \
     qrtr-ns \

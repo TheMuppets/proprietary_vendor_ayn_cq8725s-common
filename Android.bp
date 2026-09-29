@@ -6015,6 +6015,157 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
+    name: "libqms",
+    owner: "ayn",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/libqms.so",
+            ],
+            shared_libs: [
+                "libselinux",
+                "libdiag",
+                "liblog",
+                "libutils",
+                "libcutils",
+                "libjsoncpp",
+                "libqesdk2_0",
+                "libbinder",
+                "libbase",
+                "libcrypto",
+                "libnl",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libqms_client",
+    owner: "ayn",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/libqms_client.so",
+            ],
+            shared_libs: [
+                "liblog",
+                "libdiag",
+                "libbinder_ndk",
+                "libutils",
+                "libprotobuf-cpp-lite-21.12-vendorcompat",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libqms_optimized_route_mgr_sdk",
+    owner: "ayn",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/libqms_optimized_route_mgr_sdk.so",
+            ],
+            shared_libs: [
+                "liblog",
+                "libdiag",
+                "libutils",
+                "libbinder_ndk",
+                "libprotobuf-cpp-lite-21.12-vendorcompat",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libqms_packetstats_sdk",
+    owner: "ayn",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/libqms_packetstats_sdk.so",
+            ],
+            shared_libs: [
+                "liblog",
+                "libdiag",
+                "libutils",
+                "libbinder_ndk",
+                "libprotobuf-cpp-lite-21.12-vendorcompat",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libqms_sdf_sdk",
+    owner: "ayn",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/libqms_sdf_sdk.so",
+            ],
+            shared_libs: [
+                "liblog",
+                "libdiag",
+                "libutils",
+                "libbinder_ndk",
+                "libprotobuf-cpp-lite-21.12-vendorcompat",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
     name: "libqrtr",
     owner: "ayn",
     strip: {
@@ -7012,6 +7163,31 @@ cc_prebuilt_library_shared {
         android_arm64: {
             srcs: [
                 "proprietary/vendor/lib64/libsensorslog.so",
+            ],
+            shared_libs: [
+                "liblog",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libshsc",
+    owner: "ayn",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/libshsc.so",
             ],
             shared_libs: [
                 "liblog",
@@ -12316,6 +12492,15 @@ prebuilt_etc_xml {
 }
 
 prebuilt_etc_xml {
+    name: "qms-saidl.xml",
+    owner: "ayn",
+    src: "proprietary/vendor/etc/vintf/manifest/qms-saidl.xml",
+    filename_from_src: true,
+    sub_dir: "vintf/manifest",
+    soc_specific: true,
+}
+
+prebuilt_etc_xml {
     name: "snapdragon_services.xml",
     owner: "ayn",
     src: "proprietary/vendor/etc/vintf/manifest/snapdragon_services.xml",
@@ -13834,6 +14019,61 @@ cc_prebuilt_binary {
                 "libqmiservices",
                 "libqmi_client_helper",
                 "libcutils",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    strip: {
+        none: true,
+    },
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_binary {
+    name: "qms",
+    owner: "ayn",
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/bin/qms",
+            ],
+            shared_libs: [
+                "libavservices_minijail",
+                "libcutils",
+                "liblog",
+                "libdiag",
+                "libnetutils",
+                "libutils",
+                "libhardware_legacy",
+                "libqmiservices",
+                "libqmi_cci",
+                "libnl",
+                "libidl",
+                "libandroid_net",
+                "libhidlbase",
+                "libwpa_client",
+                "libbinder_ndk",
+                "libbinder",
+                "libjsoncpp",
+                "libselinux",
+                "libshsc",
+                "vendor.qti.hardware.bttpi-V3-ndk",
+                "libprotobuf-cpp-full-21.12-vendorcompat",
+                "libz",
+                "libcrypto",
+                "libssl",
+                "libbase",
+                "libcom.android.tethering.connectivity_native",
+                "android.hardware.wifi.supplicant-V3-ndk",
+                "android.hardware.wifi.hostapd-V2-ndk",
+                "libminkdescriptor",
+                "libminksocket_vendor",
+                "libqcbor",
                 "libc++",
                 "libc",
                 "libm",
